@@ -24,7 +24,6 @@ router.post("/messages", (req, res) => {
       res.send(JSON.stringify({ success: true }));
     })
     .catch(err => {
-      console.log(err);
       res.send(JSON.stringify({ success: false }));
     });
 });
