@@ -12,9 +12,21 @@
   "author": "Natalie Grant",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^24.8.0"
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.4.2",
+    "babel-loader": "^8.0.5",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "jest": "^24.8.0",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
+    "@babel/core": "^7.0.0",
     "cors": "^2.8.5",
     "dotenv": "^8.0.0",
     "eslint": "^5.16.0",
@@ -22,6 +34,8 @@
     "knex": "^0.16.5",
     "nodemon": "^1.19.0",
     "passport": "^0.4.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "sqlite3": "^4.0.6",
     "twilio": "^3.30.3"
   }
