@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import ContactForm from "./components/ContactForm";
-import ContactDetails from "./components/ContactDetails";
+import ContactForm from "../components/ContactForm";
+import ContactDetails from "../components/ContactDetails";
 
 export class Contact extends Component {
   render() {
