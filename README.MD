@@ -6,7 +6,7 @@ I am building this to strengthen my knowledge of:
 
 - Databases (using sqlite3, knex, express)
 - Serverside routing
-- React and Redux
+- React and React Hooks
 - Auth (JWT)
 - API's
 - Testing: Jest and Enzyme
@@ -28,8 +28,8 @@ I am building this to strengthen my knowledge of:
 
 - [x] Write the ReadMe
 - [x] Setup Database migrations
-- [ ] Setup Database routes
-- [ ] Setup Database functions
+- [x] Setup Database routes
+- [x] Setup Database functions
 - [ ] Setup internal API
 - [ ] Setup Hashrouter
 - [ ] Setup components
