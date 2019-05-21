@@ -7,6 +7,7 @@ import ContactPage from "../containers/ContactPage";
 
 //components
 import MainNav from "./MainNav";
+import Projects from "./Projects";
 
 export class App extends Component {
   render() {
@@ -16,6 +17,7 @@ export class App extends Component {
           <MainNav />
           <Route exact path="/" component={Homepage} />
           <Route path="/contact" component={ContactPage} />
+          <Route path="/projects" component={Projects} />
         </Fragment>
       </Router>
     );

@@ -40,7 +40,9 @@ class MainNav extends Component {
               <a href="/" className="navbar-item">
                 <strong>Home</strong>
               </a>
-              <a className="navbar-item">Projects</a>
+              <Link to="/projects" className="navbar-item">
+                Projects
+              </Link>
               <div className="navbar-item has-dropdown is-hoverable">
                 <a className="navbar-link">More</a>
                 <div className="navbar-dropdown">
