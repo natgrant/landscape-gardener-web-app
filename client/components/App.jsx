@@ -8,18 +8,20 @@ import ContactPage from "../containers/ContactPage";
 //components
 import MainNav from "./MainNav";
 import Projects from "./Projects";
+import Footer from "./Footer";
 
 export class App extends Component {
   render() {
     return (
-      <Router>
-        <Fragment>
+      <Fragment>
+        <Router>
           <MainNav />
           <Route exact path="/" component={Homepage} />
           <Route path="/contact" component={ContactPage} />
           <Route path="/projects" component={Projects} />
-        </Fragment>
-      </Router>
+          <Footer />
+        </Router>
+      </Fragment>
     );
   }
 }

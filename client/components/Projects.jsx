@@ -11,7 +11,10 @@ export default function Projects() {
         if (project.id % 2 !== 0) {
           return (
             <div className="columns" key={i}>
-              <div id={`project-${project.id}`} className="column is-6">
+              <div
+                id={`project-${project.id}`}
+                className="column is-6 project-col"
+              >
                 <figure className="service-img">
                   <img className="img-projects" src={project.image} />
                 </figure>
@@ -31,7 +34,10 @@ export default function Projects() {
                 <p>{project.location}</p>
                 <p>{project.description}</p>
               </div>
-              <div id={`project-${project.id}`} className="column is-6">
+              <div
+                id={`project-${project.id}`}
+                className="column is-6 project-col"
+              >
                 <figure className="service-img">
                   <img className="img-projects" src={project.image} />
                 </figure>

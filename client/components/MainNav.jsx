@@ -43,15 +43,9 @@ class MainNav extends Component {
               <Link to="/projects" className="navbar-item">
                 Projects
               </Link>
-              <div className="navbar-item has-dropdown is-hoverable">
-                <a className="navbar-link">More</a>
-                <div className="navbar-dropdown">
-                  <a className="navbar-item">About</a>
-                  <Link to="/contact" className="navbar-item">
-                    Contact
-                  </Link>
-                </div>
-              </div>
+              <Link to="/contact" className="navbar-item">
+                Contact
+              </Link>
             </div>
           </div>
         </nav>
