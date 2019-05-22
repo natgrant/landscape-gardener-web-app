@@ -66,7 +66,8 @@ export class ContactForm extends Component {
         className={this.state.error ? "error sms-form" : "sms-form"}
       >
         <div>
-          <h2>Please enter your details below</h2>
+          <h2 className="title">Contact Us</h2>
+          <br />
         </div>
         <div className="field">
           <label className="label">Name</label>

@@ -180,5 +180,9 @@ figure.effect-header:hover h2 div {
 
 .contact-title {
   background-image: url(/images/contact-img.jpg);
-  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.contact-col {
+  margin-bottom: 0px !important;
 }
