@@ -107,22 +107,15 @@ export class ContactForm extends Component {
         </div>
         <div className="field">
           <label className="label">Email</label>
-          <div className="control has-icons-left has-icons-right">
+          <div className="control">
             <input
-              className="input is-danger"
+              className="input"
               type="email"
               name="email"
               placeholder="Email input"
               onChange={this.handleChange}
             />
-            <span className="icon is-small is-left">
-              <i className="fas fa-envelope" />
-            </span>
-            <span className="icon is-small is-right">
-              <i className="fas fa-exclamation-triangle" />
-            </span>
           </div>
-          <p className="help is-danger">This email is invalid</p>
         </div>
         <div className="field">
           <label className="label">Service Required</label>
