@@ -1,7 +1,5 @@
 import React, { useState, Fragment } from "react";
 
-import useFetch from "../helpers/useFetch";
-
 const HooksForm = () => {
   const [name, setName] = useState("");
   const [phone, setPhoneNumber] = useState("");
@@ -11,13 +9,7 @@ const HooksForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    const data = useFetch("/api/v1/gardens/messages", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(message)
-    });
+    console.log(message);
   };
 
   return (
