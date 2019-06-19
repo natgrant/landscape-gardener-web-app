@@ -9,7 +9,22 @@ const HooksForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log(message);
+    // const formData = new FormData();
+    // formData.append("name", name);
+    // formData.append("phone", phone);
+    // formData.append("address", address);
+    // formData.append("email", email);
+    // formData.append("message", message);
+
+    const config = {
+      method: "POST",
+      headers: {
+        "content-type": "application/json"
+      },
+      body: JSON.stringify(message)
+    };
+
+    fetch("/api/v1/gardens/messages", config).then(res => res.json());
   };
 
   return (
@@ -26,7 +41,7 @@ const HooksForm = () => {
               placeholder="Enter your Name"
               type="text"
               name="name"
-              required
+              // required
             />
           </div>
         </div>
@@ -40,7 +55,7 @@ const HooksForm = () => {
               placeholder="Enter your phone number"
               type="number"
               name="phone"
-              required
+              // required
             />
           </div>
         </div>
@@ -54,7 +69,7 @@ const HooksForm = () => {
               placeholder="Enter your Address"
               type="text"
               name="address"
-              required
+              // required
             />
           </div>
         </div>
@@ -68,7 +83,7 @@ const HooksForm = () => {
               placeholder="Enter your Email"
               type="email"
               name="email"
-              required
+              // required
             />
           </div>
         </div>
