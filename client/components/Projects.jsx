@@ -20,7 +20,7 @@ export default function Projects() {
                 </figure>
               </div>
               <div className="column is-6">
-                <h3>{project.name}</h3>
+                <h3 className="project-name-text">{project.name}</h3>
                 <p>{project.location}</p>
                 <p>{project.description}</p>
               </div>
