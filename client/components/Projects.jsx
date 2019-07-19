@@ -20,8 +20,9 @@ export default function Projects() {
                 </figure>
               </div>
               <div className="column is-6">
-                <h3 className="project-name-text">{project.name}</h3>
-                <p>{project.location}</p>
+                <h3 className="project-head-text">{project.name}</h3>
+                <p className="has-text-grey is-italic">{project.location}</p>
+                <br />
                 <p>{project.description}</p>
               </div>
             </div>
@@ -30,9 +31,10 @@ export default function Projects() {
           return (
             <div className="columns" key={i}>
               <div className="column is-6">
-                <h3>{project.name}</h3>
-                <p>{project.location}</p>
-                <p>{project.description}</p>
+                <h3 className="project-head-text">{project.name}</h3>
+                <p className="has-text-grey is-italic">{project.location}</p>
+                <br />
+                <p className="">{project.description}</p>
               </div>
               <div
                 id={`project-${project.id}`}
