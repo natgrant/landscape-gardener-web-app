@@ -8,6 +8,7 @@ import ContactPage from "../containers/ContactPage";
 //components
 import MainNav from "./MainNav";
 import Projects from "./Projects";
+import About from "./About";
 import Footer from "./Footer";
 
 export class App extends Component {
@@ -19,6 +20,7 @@ export class App extends Component {
           <Route exact path="/" component={Homepage} />
           <Route path="/contact" component={ContactPage} />
           <Route path="/projects" component={Projects} />
+          <Route path="/about" component={About} />
           <Footer />
         </Router>
       </Fragment>

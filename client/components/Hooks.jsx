@@ -9,19 +9,13 @@ const HooksForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    // const formData = new FormData();
-    // formData.append("name", name);
-    // formData.append("phone", phone);
-    // formData.append("address", address);
-    // formData.append("email", email);
-    // formData.append("message", message);
 
     const config = {
       method: "POST",
       headers: {
         "content-type": "application/json"
       },
-      body: JSON.stringify(message)
+      body: JSON.stringify("hello")
     };
 
     fetch("/api/v1/gardens/messages", config).then(res => res.json());
@@ -32,7 +26,9 @@ const HooksForm = () => {
       <h2 className="title">Contact Us</h2>
       <form className="column is-half" onSubmit={handleSubmit}>
         <div className="field">
-          <label className="label">Name</label>
+          <label className="label" htmlFor="name">
+            Name
+          </label>
           <div className="control">
             <input
               className="input"

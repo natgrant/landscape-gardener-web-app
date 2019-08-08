@@ -43,6 +43,9 @@ class MainNav extends Component {
               <Link to="/projects" className="navbar-item">
                 Projects
               </Link>
+              <Link to="/about" className="navbar-item">
+                About
+              </Link>
               <Link to="/contact" className="navbar-item">
                 Contact
               </Link>
