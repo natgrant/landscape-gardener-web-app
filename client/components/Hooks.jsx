@@ -15,7 +15,7 @@ const HooksForm = () => {
       headers: {
         "content-type": "application/json"
       },
-      body: console.log(message)
+      body: JSON.stringify({ body: message })
     };
 
     fetch("/api/v1/gardens/messages", config).then(res => res.json());
