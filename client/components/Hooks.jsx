@@ -1,4 +1,5 @@
 import React, { useState, Fragment } from "react";
+const axios = require("axios");
 
 const HooksForm = () => {
   const [name, setName] = useState("");
@@ -10,15 +11,29 @@ const HooksForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
 
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("phone", phone);
+    formData.append("address", address);
+    formData.append("email", email);
+    formData.append("message", message);
+
+    console.log("test1", formData);
+    console.log("test1", name);
+
     const config = {
       method: "POST",
       headers: {
         "content-type": "application/json"
-      },
-      body: JSON.stringify({ body: message })
+      }
     };
 
-    fetch("/api/v1/gardens/messages", config).then(res => res.json());
+    console.log("test2", config);
+
+    axios.post("/api/v1/gardens/messages", formData, config).then(res => {
+      alert("Your query has been submitted, thanks!");
+      console.log(res);
+    });
   };
 
   return (
@@ -37,7 +52,7 @@ const HooksForm = () => {
               placeholder="Enter your Name"
               type="text"
               name="name"
-              // required
+              required
             />
           </div>
         </div>
@@ -51,7 +66,7 @@ const HooksForm = () => {
               placeholder="Enter your phone number"
               type="number"
               name="phone"
-              // required
+              required
             />
           </div>
         </div>
@@ -65,7 +80,7 @@ const HooksForm = () => {
               placeholder="Enter your Address"
               type="text"
               name="address"
-              // required
+              required
             />
           </div>
         </div>
@@ -79,7 +94,7 @@ const HooksForm = () => {
               placeholder="Enter your Email"
               type="email"
               name="email"
-              // required
+              required
             />
           </div>
         </div>
