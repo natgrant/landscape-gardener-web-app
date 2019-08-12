@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 const axios = require("axios");
 
 const HooksForm = () => {
@@ -8,18 +8,21 @@ const HooksForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = e => {
-    e.preventDefault();
+  let formData = new FormData();
 
-    const formData = new FormData();
+  useEffect(() => {
     formData.append("name", name);
     formData.append("phone", phone);
     formData.append("address", address);
     formData.append("email", email);
     formData.append("message", message);
+  });
+
+  const handleSubmit = e => {
+    e.preventDefault();
 
     console.log("test1", formData);
-    console.log("test1", name);
+    console.log("test1", name, phone, address, email, message);
 
     const config = {
       method: "POST",
