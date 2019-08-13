@@ -10,30 +10,31 @@ const HooksForm = () => {
 
   let formData = new FormData();
 
-  useEffect(() => {
-    formData.append("name", name);
-    formData.append("phone", phone);
-    formData.append("address", address);
-    formData.append("email", email);
-    formData.append("message", message);
-  });
+  console.log("test3", name, phone, address, email, message);
+
+  console.log("test1", formData);
+
+  // useEffect(() => {
+  formData.append("name", name);
+  formData.append("phone", phone);
+  formData.append("address", address);
+  formData.append("email", email);
+  formData.append("message", message);
+  // });
 
   const handleSubmit = e => {
     e.preventDefault();
 
-    console.log("test1", formData);
-    console.log("test1", name, phone, address, email, message);
-
     const config = {
       method: "POST",
       headers: {
-        "content-type": "application/json"
-      }
+        "content-type": "multipart/form-data"
+      },
+      body: formData
     };
-
     console.log("test2", config);
 
-    axios.post("/api/v1/gardens/messages", formData, config).then(res => {
+    axios.post("/api/v1/gardens/messages", config).then(res => {
       alert("Your query has been submitted, thanks!");
       console.log(res);
     });
