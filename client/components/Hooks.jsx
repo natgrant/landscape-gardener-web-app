@@ -1,5 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
-const axios = require("axios");
+import React, { useState, Fragment } from "react";
 
 const HooksForm = () => {
   const [name, setName] = useState("");
