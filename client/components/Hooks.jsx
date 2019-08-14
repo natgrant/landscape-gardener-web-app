@@ -8,20 +8,6 @@ const HooksForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  let formData = new FormData();
-
-  console.log("test3", name, phone, address, email, message);
-
-  console.log("test1", formData);
-
-  // useEffect(() => {
-  formData.append("name", name);
-  formData.append("phone", phone);
-  formData.append("address", address);
-  formData.append("email", email);
-  formData.append("message", message);
-  // });
-
   const handleSubmit = e => {
     e.preventDefault();
 
@@ -30,14 +16,18 @@ const HooksForm = () => {
       headers: {
         "content-type": "multipart/form-data"
       },
-      body: formData
+      body: `You have a new query from ${name} phone: ${phone} address: ${address} email: ${email} message: ${message}`
     };
-    console.log("test2", config);
 
-    axios.post("/api/v1/gardens/messages", config).then(res => {
-      alert("Your query has been submitted, thanks!");
-      console.log(res);
-    });
+    axios
+      .post("/api/v1/gardens/messages", config)
+      .then(res => {
+        alert("Your query has been submitted, thanks!");
+        console.log(res);
+      })
+      .catch(res => {
+        console.log(res);
+      });
   };
 
   return (

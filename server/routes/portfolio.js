@@ -13,6 +13,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/messages", (req, res) => {
+  console.log(req);
   res.header("Content-Type", "application/json");
   client.messages
     .create({
